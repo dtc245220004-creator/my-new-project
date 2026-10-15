@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid-row-gap Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Thực hành CSS grid-row-gap Property</h1>
+
+    <section class="example">
+        <h2>Ví dụ 1: length - grid-row-gap: 20px</h2>
+        <div class="grid-container gap-length">
+            <div>Ô 1</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+        </div>
+    </section>
+
+    <section class="example">
+        <h2>Ví dụ 2: percentage - grid-row-gap: 5%</h2>
+        <div class="grid-container gap-percent">
+            <div>Ô 1</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+        </div>
+    </section>
+
+    <section class="example">
+        <h2>Ví dụ 3: global values</h2>
+
+        <h3>initial</h3>
+        <div class="grid-container gap-initial">
+            <div>Ô 1</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+        </div>
+
+        <h3>inherit</h3>
+        <div class="inherit-parent">
+            <div class="grid-container gap-inherit">
+                <div>Ô 1</div>
+                <div>Ô 2</div>
+                <div>Ô 3</div>
+                <div>Ô 4</div>
+            </div>
+        </div>
+
+        <h3>unset</h3>
+        <div class="grid-container gap-unset">
+            <div>Ô 1</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+        </div>
+    </section>
+</body>
+</html>
