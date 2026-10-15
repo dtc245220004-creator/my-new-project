@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Tìm kiếm Google</title>
+    <title>Thực hành Table trong HTML</title>
     <style>
         * {
             box-sizing: border-box;
@@ -11,95 +11,265 @@
 
         body {
             margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-family: Arial, Helvetica, sans-serif;
             background: #f5f7fb;
-            color: #202124;
+            color: #222;
+            line-height: 1.6;
         }
 
-        .search-box {
-            width: min(92%, 620px);
-            background: #ffffff;
-            padding: 40px 32px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            text-align: center;
+        .container {
+            width: min(1100px, 92%);
+            margin: 40px auto;
         }
 
         h1 {
+            text-align: center;
+            margin-bottom: 8px;
+            color: #1f4e78;
+        }
+
+        .intro {
+            text-align: center;
+            color: #555;
+            margin-bottom: 32px;
+        }
+
+        section {
+            background: #fff;
+            padding: 24px;
+            margin-bottom: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
             margin-top: 0;
-            margin-bottom: 12px;
-            color: #4285f4;
+            color: #2b5797;
         }
 
-        p {
-            margin-bottom: 28px;
-            color: #5f6368;
-        }
-
-        form {
-            display: flex;
-            gap: 10px;
-        }
-
-        input[type="text"] {
-            flex: 1;
-            min-width: 0;
-            padding: 13px 15px;
-            border: 1px solid #dadce0;
+        .table-container {
+            width: 100%;
+            overflow: auto;
             border-radius: 8px;
-            font-size: 16px;
-            outline: none;
         }
 
-        input[type="text"]:focus {
-            border-color: #4285f4;
-            box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.14);
+        table {
+            width: 100%;
+            min-width: 650px;
+            border-collapse: collapse;
+            background: #fff;
         }
 
-        button {
-            padding: 13px 20px;
-            border: 0;
-            border-radius: 8px;
-            background: #4285f4;
-            color: #ffffff;
-            font-size: 16px;
-            cursor: pointer;
+        caption {
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px;
+            color: #333;
         }
 
-        button:hover {
-            background: #3367d6;
+        th,
+        td {
+            border: 1px solid #cfd8e3;
+            padding: 12px;
+            text-align: center;
         }
 
-        @media (max-width: 520px) {
-            form {
-                flex-direction: column;
+        th {
+            background: #eaf2f8;
+            color: #1f3b5b;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        tbody tr:hover {
+            background: #eef6ff;
+        }
+
+        tfoot td {
+            font-weight: bold;
+            background: #f1f5f9;
+        }
+
+        .note {
+            color: #666;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0 35px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 18px;
             }
 
-            button {
-                width: 100%;
+            h1 {
+                font-size: 26px;
             }
         }
     </style>
 </head>
 <body>
-    <main class="search-box">
-        <h1>Form Tìm kiếm Google</h1>
-        <p>Nhập từ khóa và nhấn “Tìm kiếm” để xem kết quả trên Google.</p>
+    <main class="container">
+        <h1>Thực hành Table trong HTML</h1>
+        <p class="intro">Minh họa đầy đủ table, tr, th, td, colspan, rowspan, thead, tbody, tfoot và bảng có thể cuộn.</p>
 
-        <form action="https://www.google.com.vn/search" method="GET">
-            <input
-                type="text"
-                name="q"
-                placeholder="Nhập từ khóa tìm kiếm..."
-                aria-label="Từ khóa tìm kiếm"
-                required
-            >
-            <button type="submit">Tìm kiếm</button>
-        </form>
+        <section>
+            <h2>1. Bảng cơ bản</h2>
+            <div class="table-container">
+                <table>
+                    <caption>Danh sách học viên</caption>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ và tên</th>
+                            <th>Tuổi</th>
+                            <th>Lớp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>20</td>
+                            <td>Web</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Trần Thị B</td>
+                            <td>21</td>
+                            <td>Java</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lê Văn C</td>
+                            <td>22</td>
+                            <td>PHP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Ví dụ colspan</h2>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th colspan="2">Thông tin cá nhân</th>
+                    </tr>
+                    <tr>
+                        <td>Họ và tên</td>
+                        <td>Nguyễn Văn A</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>nguyenvana@example.com</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="note">colspan="2" dùng để gộp một ô qua 2 cột.</p>
+        </section>
+
+        <section>
+            <h2>3. Ví dụ rowspan</h2>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Ghi chú</th>
+                        <th>Nội dung</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Lịch học</td>
+                        <td>Thứ 2: HTML</td>
+                    </tr>
+                    <tr>
+                        <td>Thứ 4: CSS</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="note">rowspan="2" dùng để gộp một ô qua 2 hàng.</p>
+        </section>
+
+        <section>
+            <h2>4. Bảng sản phẩm với thead, tbody, tfoot</h2>
+            <div class="table-container">
+                <table>
+                    <caption>Danh sách sản phẩm</caption>
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Áo thun</td>
+                            <td>200.000 VND</td>
+                            <td>2</td>
+                            <td>400.000 VND</td>
+                        </tr>
+                        <tr>
+                            <td>Quần jeans</td>
+                            <td>450.000 VND</td>
+                            <td>1</td>
+                            <td>450.000 VND</td>
+                        </tr>
+                        <tr>
+                            <td>Giày thể thao</td>
+                            <td>650.000 VND</td>
+                            <td>1</td>
+                            <td>650.000 VND</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Tổng cộng</td>
+                            <td>1.500.000 VND</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Bảng dữ liệu dài có thể cuộn</h2>
+            <div class="table-container" style="max-height: 230px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ và tên</th>
+                            <th>Email</th>
+                            <th>Khóa học</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Nguyễn Văn An</td><td>an@example.com</td><td>HTML</td></tr>
+                        <tr><td>2</td><td>Trần Minh Bình</td><td>binh@example.com</td><td>CSS</td></tr>
+                        <tr><td>3</td><td>Lê Thu Chi</td><td>chi@example.com</td><td>JavaScript</td></tr>
+                        <tr><td>4</td><td>Phạm Quốc Dũng</td><td>dung@example.com</td><td>Java</td></tr>
+                        <tr><td>5</td><td>Hoàng Gia Hân</td><td>han@example.com</td><td>PHP</td></tr>
+                        <tr><td>6</td><td>Vũ Minh Khang</td><td>khang@example.com</td><td>React</td></tr>
+                        <tr><td>7</td><td>Đỗ Ngọc Lan</td><td>lan@example.com</td><td>Bootstrap</td></tr>
+                        <tr><td>8</td><td>Bùi Thành Nam</td><td>nam@example.com</td><td>Node.js</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note">Khi dữ liệu vượt quá vùng chứa, overflow: auto sẽ tạo thanh cuộn.</p>
+        </section>
     </main>
+
+    <footer>
+        Bài thực hành Table trong HTML
+    </footer>
 </body>
 </html>
