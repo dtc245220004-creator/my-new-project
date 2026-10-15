@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+.page-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "sidebar main"
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.navigation {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    background-color: #374151;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 12px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.navigation a:hover {
+    background-color: #4b5563;
+    font-weight: bold;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #e5e7eb;
+    padding: 24px;
+}
+
+.sidebar h2,
+.main-content h2 {
+    margin-bottom: 16px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 10px 0;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.main-content {
+    grid-area: main;
+    background-color: white;
+    padding: 28px;
+    line-height: 1.7;
+}
+
+.main-content p + p {
+    margin-top: 14px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 768px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .navigation {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding: 22px 14px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .sidebar,
+    .main-content {
+        padding: 18px;
+    }
+}
