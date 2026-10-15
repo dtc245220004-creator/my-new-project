@@ -1,0 +1,23 @@
+@mixin flex-center($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin section-space {
+  padding: 80px 20px;
+}
+
+@mixin card-surface {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+@mixin respond-tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
