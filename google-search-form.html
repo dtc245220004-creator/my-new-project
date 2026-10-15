@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tìm kiếm Google</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #202124;
+        }
+
+        .container {
+            width: min(92%, 620px);
+            background: #fff;
+            padding: 40px 32px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #4285f4;
+        }
+
+        p {
+            color: #5f6368;
+            margin-bottom: 24px;
+        }
+
+        form {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            min-width: 0;
+            padding: 13px 15px;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4285f4;
+            box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.14);
+        }
+
+        input[type="submit"] {
+            padding: 13px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #4285f4;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #3367d6;
+        }
+
+        .note {
+            margin-top: 24px;
+            padding: 14px;
+            border-radius: 8px;
+            background: #f8fafc;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        @media (max-width: 520px) {
+            form {
+                flex-direction: column;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>Form Tìm kiếm Google</h1>
+        <p>Nhập từ khóa và nhấn “Tìm kiếm” để xem kết quả trên Google.</p>
+
+        <form action="https://www.google.com.vn/search" method="GET">
+            <input
+                type="text"
+                name="q"
+                placeholder="Nhập từ khóa"
+                aria-label="Từ khóa tìm kiếm"
+                required
+            >
+            <input type="submit" value="Tìm kiếm">
+        </form>
+
+        <div class="note">
+            <strong>Ghi chú:</strong><br>
+            - Form sử dụng phương thức GET.<br>
+            - Thuộc tính action trỏ tới Google Search.<br>
+            - Trường tìm kiếm dùng name="q" để Google nhận từ khóa.<br>
+            - Nếu dùng Bing, đổi action thành https://www.bing.com/search và vẫn giữ name="q".
+        </div>
+    </main>
+</body>
+</html>
