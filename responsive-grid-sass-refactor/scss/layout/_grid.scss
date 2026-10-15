@@ -1,0 +1,60 @@
+.gridcontainer {
+  width: 100%;
+}
+
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+
+  &--header { height: 90px; }
+  &--main { height: 230px; }
+  &--footer { height: 50px; }
+  &--overlay { height: 370px; }
+}
+
+.gridcontent {
+  @include grid-cell;
+
+  &--full {
+    width: 100%;
+    border-right-color: transparent;
+  }
+
+  &--header { background: $header-color; }
+  &--footer { background: $footer-color; }
+
+  &--sidebar,
+  &--aside {
+    width: 25%;
+    padding-top: 15px;
+    border: 0;
+    background-color: $surface-color;
+  }
+
+  &--blank {
+    border: 0;
+    background-color: $surface-color;
+  }
+
+  &--column {
+    background-color: $surface-color;
+    border-right: 1px solid $grid-line-color;
+  }
+}
+
+.first-column {
+  border-left: 1px solid $grid-line-color;
+}
+
+.preview-layer {
+  position: absolute;
+  left: 8px;
+  right: 10px;
+  width: auto;
+  opacity: $preview-opacity;
+}
+
+.grid-overlay {
+  opacity: $overlay-opacity;
+}
