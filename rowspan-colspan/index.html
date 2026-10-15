@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gộp ô trong bảng</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 28px;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Thời khóa biểu</h2>
+        <table>
+            <tr>
+                <th>Thứ</th>
+                <th>Môn học</th>
+                <th>Giáo viên</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Thứ Hai</td>
+                <td>Toán</td>
+                <td>Thầy Nam</td>
+            </tr>
+            <tr>
+                <td>Văn</td>
+                <td>Cô Hạnh</td>
+            </tr>
+            <tr>
+                <td>Thứ Ba</td>
+                <td colspan="2">Nghỉ học</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
