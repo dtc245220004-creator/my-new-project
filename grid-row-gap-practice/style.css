@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    color: #173b6c;
+    margin-bottom: 30px;
+}
+
+.example {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 22px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.example h2 {
+    margin-top: 0;
+    color: #24558a;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 15px;
+}
+
+.grid-container div {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.gap-length {
+    grid-row-gap: 20px;
+}
+
+.gap-length div {
+    background-color: lightblue;
+}
+
+.gap-percent {
+    grid-row-gap: 5%;
+    height: 400px;
+}
+
+.gap-percent div {
+    background-color: lightgreen;
+}
+
+.gap-initial {
+    grid-row-gap: initial;
+}
+
+.gap-initial div {
+    background-color: #ffd59a;
+}
+
+.inherit-parent {
+    grid-row-gap: 30px;
+}
+
+.gap-inherit {
+    grid-row-gap: inherit;
+}
+
+.gap-inherit div {
+    background-color: #d6c3ff;
+}
+
+.gap-unset {
+    grid-row-gap: unset;
+}
+
+.gap-unset div {
+    background-color: #ffb7b7;
+}
+
+h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
