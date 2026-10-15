@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page SASS Refactor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="navbar container">
+      <a class="logo" href="#home">NovaShop</a>
+      <ul class="nav-links">
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#products">Sản phẩm</a></li>
+        <li><a href="#stats">Thống kê</a></li>
+        <li><a href="#footer">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content container">
+      <p class="eyebrow">Bộ sưu tập mới</p>
+      <h1>Thiết kế hiện đại cho phong cách mỗi ngày</h1>
+      <p>Khám phá những sản phẩm nổi bật với chất lượng tốt, kiểu dáng tối giản và trải nghiệm mua sắm dễ dàng.</p>
+      <a class="btn" href="#products">Khám phá ngay</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="products section" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Nổi bật</p>
+          <h2>Sản phẩm được yêu thích</h2>
+        </div>
+        <div class="product-grid">
+          <article class="card">
+            <div class="product-thumb product-thumb--one"></div>
+            <h3>Urban Backpack</h3>
+            <p>Thiết kế gọn nhẹ, phù hợp đi học và đi làm.</p>
+            <strong>890.000đ</strong>
+          </article>
+          <article class="card">
+            <div class="product-thumb product-thumb--two"></div>
+            <h3>Classic Sneakers</h3>
+            <p>Phong cách tối giản, dễ phối đồ hằng ngày.</p>
+            <strong>1.290.000đ</strong>
+          </article>
+          <article class="card">
+            <div class="product-thumb product-thumb--three"></div>
+            <h3>Essential Watch</h3>
+            <p>Thanh lịch, tinh tế và phù hợp nhiều hoàn cảnh.</p>
+            <strong>1.590.000đ</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section" id="stats">
+      <div class="container stats-grid">
+        <div><strong>12K+</strong><span>Khách hàng</span></div>
+        <div><strong>98%</strong><span>Hài lòng</span></div>
+        <div><strong>35+</strong><span>Sản phẩm</span></div>
+        <div><strong>24/7</strong><span>Hỗ trợ</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>NovaShop</h3>
+        <p>Landing page được tái cấu trúc CSS sang SASS/SCSS.</p>
+      </div>
+      <div>
+        <h4>Liên kết</h4>
+        <a href="#home">Trang chủ</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#stats">Thống kê</a>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <p>Email: hello@novashop.test</p>
+        <p>Hotline: 0123 456 789</p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 NovaShop. All rights reserved.</p>
+  </footer>
+</body>
+</html>
