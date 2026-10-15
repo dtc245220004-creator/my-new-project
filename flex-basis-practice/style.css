@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border: 2px dashed #999;
+    overflow: auto;
+}
+
+.item {
+    padding: 20px;
+    background: lightblue;
+    text-align: center;
+    border: 1px solid #7aa7c7;
+}
+
+/* Ví dụ 1: px */
+.basis-px .item1 {
+    flex-basis: 200px;
+}
+
+.basis-px .item2 {
+    flex-basis: 100px;
+}
+
+.basis-px .item3 {
+    flex-basis: 150px;
+}
+
+/* Ví dụ 2: flex-direction column */
+.basis-column {
+    flex-direction: column;
+    height: 420px;
+}
+
+.basis-column .item {
+    flex-basis: 100px;
+    background: lightgreen;
+}
+
+/* Ví dụ 3: % */
+.basis-percent .item {
+    flex-basis: 50%;
+    background: lightcoral;
+}
+
+/* Ví dụ 4: kết hợp flex-grow */
+.basis-grow {
+    width: 100%;
+}
+
+.basis-grow .item {
+    flex-basis: 100px;
+    background: lightblue;
+}
+
+.grow1 {
+    flex-grow: 1;
+}
+
+.grow2 {
+    flex-grow: 2;
+}
+
+.grow3 {
+    flex-grow: 1;
+}
+
+/* Ví dụ 5: auto, initial, inherit */
+.basis-special {
+    align-items: stretch;
+}
+
+.auto-item {
+    width: 220px;
+    flex-basis: auto;
+    background: #ffe4a8;
+}
+
+.initial-item {
+    width: 180px;
+    flex-basis: initial;
+    background: #e8d4ff;
+}
+
+.inherit-parent {
+    display: flex;
+    flex-basis: 240px;
+}
+
+.inherit-item {
+    flex-basis: inherit;
+    width: 100%;
+    background: #d7f0ff;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .basis-px,
+    .basis-percent,
+    .basis-grow,
+    .basis-special {
+        flex-wrap: wrap;
+    }
+}
