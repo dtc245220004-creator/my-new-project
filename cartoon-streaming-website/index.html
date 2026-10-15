@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoạt Hình Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">🎬 Hoạt Hình Online</div>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm phim theo tên...">
+            <button type="button">Tìm kiếm</button>
+        </div>
+    </header>
+
+    <nav class="head-link">
+        <a href="#home">Trang chủ</a>
+        <a href="#new">Mới cập nhật</a>
+        <a href="#popular">Xem nhiều</a>
+        <a href="#youtube">YouTube</a>
+    </nav>
+
+    <div class="page-layout" id="home">
+        <aside class="left-content">
+            <h2>Danh sách phim</h2>
+
+            <a class="video-item active" href="#video1">
+                <div class="thumb thumb-blue">Doraemon</div>
+                <div>
+                    <h3>Doraemon - Tập đặc biệt</h3>
+                    <p>HD 720p • Thuyết minh</p>
+                </div>
+            </a>
+
+            <a class="video-item" href="#video2">
+                <div class="thumb thumb-yellow">Tom & Jerry</div>
+                <div>
+                    <h3>Tom & Jerry - Cuộc rượt đuổi</h3>
+                    <p>FullHD • 2,5 triệu lượt xem</p>
+                </div>
+            </a>
+
+            <a class="video-item" href="#video3">
+                <div class="thumb thumb-green">Pokémon</div>
+                <div>
+                    <h3>Pokémon - Hành trình mới</h3>
+                    <p>HD 720p • Mới cập nhật</p>
+                </div>
+            </a>
+
+            <a class="video-item" href="#youtube">
+                <div class="thumb thumb-red">YouTube</div>
+                <div>
+                    <h3>Video hoạt hình YouTube</h3>
+                    <p>Nhúng bằng iframe</p>
+                </div>
+            </a>
+        </aside>
+
+        <main class="right-content">
+            <section class="player-section" id="video1">
+                <h1>Doraemon - Tập đặc biệt</h1>
+                <video controls poster="https://dummyimage.com/1280x720/dbeafe/1e3a8a&text=Doraemon+HD">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+                <div class="movie-info">
+                    <span>HD 720p</span>
+                    <span>Thuyết minh tiếng Việt</span>
+                    <span>Không quảng cáo</span>
+                </div>
+                <p>Video mặc định được hiển thị ở khu vực xem phim. Giao diện tập trung vào nội dung phù hợp với trẻ em, dễ tìm kiếm và dễ sử dụng.</p>
+            </section>
+
+            <section class="featured-section" id="new">
+                <h2>Mới cập nhật</h2>
+                <div class="card-grid">
+                    <article class="movie-card" id="video2">
+                        <div class="card-cover cover-one">Tom & Jerry</div>
+                        <h3>Tom & Jerry</h3>
+                        <p>FullHD 1080p • Thuyết minh</p>
+                    </article>
+                    <article class="movie-card" id="video3">
+                        <div class="card-cover cover-two">Pokémon</div>
+                        <h3>Pokémon</h3>
+                        <p>HD 720p • Mới cập nhật</p>
+                    </article>
+                    <article class="movie-card" id="popular">
+                        <div class="card-cover cover-three">Conan</div>
+                        <h3>Thám tử Conan</h3>
+                        <p>FullHD • Nhiều lượt xem</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="youtube-section" id="youtube">
+                <h2>Video YouTube</h2>
+                <div class="iframe-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2026 Hoạt Hình Online - Website thực hành HTML & CSS</p>
+    </footer>
+</body>
+</html>
