@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid - SASS Refactor</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="preview-layer">
+    <div class="gridcontainer">
+        <div class="gridwrapper gridwrapper--header">
+            <div class="gridcontent gridcontent--full gridcontent--header"></div>
+        </div>
+
+        <div class="gridwrapper gridwrapper--main">
+            <div class="gridcontent gridcontent--sidebar">
+                <div class="menu-item"></div>
+                <div class="menu-item"></div>
+                <div class="menu-item"></div>
+                <div class="menu-item menu-item--last"></div>
+            </div>
+
+            <div class="gridcontent gridcontent--blank"></div>
+            <div class="gridcontent gridcontent--blank"></div>
+            <div class="gridcontent gridcontent--blank"></div>
+            <div class="gridcontent gridcontent--blank"></div>
+            <div class="gridcontent gridcontent--blank"></div>
+            <div class="gridcontent gridcontent--blank"></div>
+
+            <div class="gridcontent gridcontent--aside">
+                <div class="aside-block"></div>
+            </div>
+        </div>
+
+        <div class="gridwrapper gridwrapper--footer">
+            <div class="gridcontent gridcontent--full gridcontent--footer"></div>
+        </div>
+    </div>
+</div>
+
+<div class="gridcontainer grid-overlay">
+    <div class="gridwrapper gridwrapper--overlay">
+        <div class="gridcontent gridcontent--column first-column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+        <div class="gridcontent gridcontent--column"></div>
+    </div>
+</div>
+
+<p class="description">Resize the browser window to see that this grid will respond to the resizing, and always use 100% of the available space.</p>
+
+</body>
+</html>
