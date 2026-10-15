@@ -1,0 +1,72 @@
+/* Element selector */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f6ff;
+    color: #222;
+}
+
+/* Class selector */
+.container {
+    width: 90%;
+    max-width: 760px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.intro {
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.hobby {
+    margin: 10px 0;
+    padding: 10px 14px;
+    border-radius: 6px;
+}
+
+.hobby-one {
+    color: #b91c1c;
+    background-color: #fee2e2;
+}
+
+.hobby-two {
+    color: #1d4ed8;
+    background-color: #dbeafe;
+}
+
+.hobby-three {
+    color: #047857;
+    background-color: #d1fae5;
+}
+
+/* ID selector */
+#main-title {
+    text-align: center;
+    color: #1e3a8a;
+}
+
+#action-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* Grouping selector */
+h1, h2, p {
+    margin-bottom: 16px;
+}
+
+/* Pseudo-class selector */
+#action-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
