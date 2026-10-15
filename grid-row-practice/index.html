@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Row Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Thực hành CSS grid-row Property</h1>
+
+    <section class="example-block">
+        <h2>Ví dụ 1: grid-row: 1 / 3</h2>
+        <div class="grid-container example-1">
+            <div class="item item1">Ô 1</div>
+            <div class="item">Ô 2</div>
+            <div class="item">Ô 3</div>
+            <div class="item">Ô 4</div>
+            <div class="item">Ô 5</div>
+            <div class="item">Ô 6</div>
+        </div>
+        <p>Ô 1 bắt đầu từ đường kẻ hàng số 1 và kết thúc tại đường kẻ hàng số 3, nên chiếm 2 hàng.</p>
+    </section>
+
+    <section class="example-block">
+        <h2>Ví dụ 2: grid-row: 2 / 4</h2>
+        <div class="grid-container example-2">
+            <div class="item item1">Ô 1</div>
+            <div class="item">Ô 2</div>
+            <div class="item">Ô 3</div>
+            <div class="item">Ô 4</div>
+            <div class="item">Ô 5</div>
+            <div class="item">Ô 6</div>
+        </div>
+        <p>Ô 1 bắt đầu từ đường kẻ hàng số 2 và kết thúc tại đường kẻ hàng số 4.</p>
+    </section>
+
+    <section class="example-block">
+        <h2>Ví dụ 3: grid-row: span 2</h2>
+        <div class="grid-container example-3">
+            <div class="item item1">Ô 1</div>
+            <div class="item">Ô 2</div>
+            <div class="item">Ô 3</div>
+            <div class="item">Ô 4</div>
+            <div class="item">Ô 5</div>
+            <div class="item">Ô 6</div>
+        </div>
+        <p>Ô 1 được Grid tự động đặt vị trí và kéo dài qua 2 hàng liên tiếp.</p>
+    </section>
+</body>
+</html>
