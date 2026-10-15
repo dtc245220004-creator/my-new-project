@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS flex-grow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <h1>CSS | flex-grow Property</h1>
+        <p class="description">
+            Ví dụ gồm 5 Flex Item. Item 2 được đặt <code>flex-grow: 3</code>,
+            các item còn lại dùng <code>flex-grow: 1</code>, vì vậy Item 2 nhận nhiều
+            không gian trống hơn.
+        </p>
+
+        <section class="demo">
+            <div class="container">
+                <div class="item">Item 1</div>
+                <div class="item item2">Item 2<br><small>flex-grow: 3</small></div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+            </div>
+        </section>
+
+        <section class="note">
+            <h2>Kết quả</h2>
+            <p>Item 2 phát triển lớn hơn bốn item còn lại trong cùng Flex Container.</p>
+        </section>
+    </main>
+</body>
+</html>
