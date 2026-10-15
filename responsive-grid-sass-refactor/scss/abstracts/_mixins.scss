@@ -1,0 +1,15 @@
+@mixin grid-cell($width: $column-width, $background: $default-grid-color) {
+  width: $width;
+  height: 100%;
+  float: left;
+  margin: 0;
+  border-right: 1px solid $border-color;
+  background-color: $background;
+}
+
+@mixin solid-block($background, $height: 100%) {
+  width: 100%;
+  height: $height;
+  border: 0;
+  background-color: $background;
+}
