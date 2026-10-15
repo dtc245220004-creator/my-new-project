@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 40px 20px;
+            color: #222;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #1f4e78;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+        th, td {
+            border: 1px solid #b8c2cc;
+            padding: 14px;
+            text-align: center;
+        }
+        th {
+            background: #dbeafe;
+            color: #1e3a5f;
+        }
+        tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .long-meeting {
+            background: #fff7ed;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lịch họp công ty</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ngày</th>
+                    <th>Giờ</th>
+                    <th>Nội dung cuộc họp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">15/10/2026</td>
+                    <td>08:00 - 09:00</td>
+                    <td>Họp giao ban đầu ngày</td>
+                </tr>
+                <tr>
+                    <td>14:00 - 15:30</td>
+                    <td>Đánh giá tiến độ dự án</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">16/10/2026</td>
+                    <td>09:00 - 10:00</td>
+                    <td>Họp phòng kinh doanh</td>
+                </tr>
+                <tr>
+                    <td>15:00 - 16:00</td>
+                    <td>Trao đổi kế hoạch marketing</td>
+                </tr>
+
+                <tr>
+                    <td>17/10/2026</td>
+                    <td colspan="2" class="long-meeting">08:00 - 11:00: Họp chiến lược quý IV (cuộc họp kéo dài nhiều giờ)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
