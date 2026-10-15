@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+.container {
+    width: min(1000px, 92%);
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #1f4e78;
+    margin-bottom: 30px;
+}
+
+section {
+    background: #fff;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    color: #2b5797;
+}
+
+li {
+    margin: 8px 0;
+}
+
+.square-list {
+    list-style-type: square;
+}
+
+.roman-list {
+    list-style-type: upper-roman;
+}
+
+.image-list {
+    list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Ccircle cx='6' cy='6' r='5' fill='%232b5797'/%3E%3C/svg%3E");
+}
+
+.position-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.position-grid > div {
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.outside-list {
+    list-style-position: outside;
+}
+
+.inside-list {
+    list-style-position: inside;
+}
+
+.short-list {
+    list-style: circle inside none;
+}
+
+.color-list {
+    background-color: #eaf2ff;
+    color: #17365d;
+    padding: 20px 20px 20px 45px;
+    border-radius: 8px;
+}
+
+.color-list li {
+    margin: 10px 0;
+    padding: 6px 10px;
+    background: #fff;
+    border-radius: 6px;
+}
+
+.roadmap-list {
+    list-style: upper-roman inside;
+    background-color: #edf8ee;
+    color: #1f5d2d;
+    padding: 22px;
+    border-radius: 8px;
+}
+
+.roadmap-list li {
+    margin: 10px 0;
+    padding: 8px 12px;
+    background: #fff;
+    border-left: 4px solid #78b884;
+    border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+    .position-grid {
+        grid-template-columns: 1fr;
+    }
+}
