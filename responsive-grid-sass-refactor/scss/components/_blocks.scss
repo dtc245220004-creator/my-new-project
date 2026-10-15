@@ -1,0 +1,16 @@
+.menu-item {
+  @include solid-block($accent-color, 15%);
+  margin-bottom: 10px;
+
+  &--last {
+    margin-bottom: 0;
+  }
+}
+
+.aside-block {
+  @include solid-block($accent-color, 92%);
+}
+
+.description {
+  margin-top: 12px;
+}
