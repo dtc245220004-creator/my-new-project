@@ -1,0 +1,113 @@
+.btn {
+  display: inline-block;
+  background: $primary;
+  color: white;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: $transition;
+
+  &:hover {
+    background: $primary-dark;
+    transform: translateY(-2px);
+  }
+}
+
+.products {
+  background: $surface-soft;
+}
+
+.card {
+  @include card-surface;
+  padding: 18px;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  h3 {
+    margin: 18px 0 8px;
+    font-size: 1.25rem;
+  }
+
+  p {
+    color: $text-muted;
+    margin-bottom: 14px;
+  }
+
+  strong {
+    color: $primary;
+    font-size: 1.1rem;
+  }
+}
+
+.product-thumb {
+  height: 220px;
+  border-radius: calc($radius - 6px);
+
+  &--one {
+    background: linear-gradient(135deg, #dfe6e9, #6c5ce7);
+  }
+
+  &--two {
+    background: linear-gradient(135deg, #ffeaa7, #fd79a8);
+  }
+
+  &--three {
+    background: linear-gradient(135deg, #81ecec, #0984e3);
+  }
+}
+
+.stats {
+  background: $dark;
+  color: white;
+
+  .stats-grid > div {
+    @include flex-center(6px);
+    flex-direction: column;
+    min-height: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: $radius;
+
+    strong {
+      font-size: 2.2rem;
+    }
+
+    span {
+      color: #b8bec9;
+    }
+  }
+}
+
+.footer {
+  background: #0f1118;
+  color: white;
+  padding: 60px 20px 24px;
+
+  h3,
+  h4 {
+    margin-bottom: 12px;
+  }
+
+  p,
+  a {
+    color: #b8bec9;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 8px;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
